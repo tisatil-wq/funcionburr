@@ -14,10 +14,14 @@
 #' Random values are generated using the inverse transform method:
 #' \deqn{X = \left((1 - U)^{-1/k} - 1\right)^{1/c}, \quad U \sim U(0,1)}
 #'
+#'
+#'
 #' @examples
 #' x <- rburr(1000, c = 2, k = 3)
 #' hist(x, probability = TRUE)
 #' curve(dburr(x, 2, 3), add = TRUE, col = "red")
+#'
+#' @importFrom stats runif
 #'
 #' @export
 rburr <- function(n, c, k){
